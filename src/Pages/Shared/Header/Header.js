@@ -14,9 +14,7 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav className="me-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                          {
-                              user?.email ? <Button onClick={logOut} variant="light">Logout</Button>: <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                          }
+                         
                             
 
                         </Nav>
@@ -24,6 +22,10 @@ const Header = () => {
 
 
                             Signed in as: <a href="#login" className="text-danger text-decoration-none">{user?.displayName  }</a>
+                            {
+                              user?.email ? <Button onClick={logOut} variant="light">Logout</Button>: <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                          }
+
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
